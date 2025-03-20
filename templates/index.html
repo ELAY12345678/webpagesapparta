@@ -3,14 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre del Restaurante</title>
+    <title>MASAHE - A Taste of Japan</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
     <header>
-      <div class="container">
-        <h1>Bienvenidos a Nuestro Restaurante</h1>
-      </div>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/">
+            <img src="{{ url_for('static', filename='images/masahe-logo.png') }}" alt="MASAHE Logo">
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="#nosotros">NOSOTROS</a>
+          <a href="#reservas">RESERVAS</a>
+          <a href="#menu">MENÚ</a>
+          <a href="#ubicacion">UBICACIÓN</a>
+          <a href="#contacto">CONTACTO</a>
+        </div>
+      </nav>
     </header>
 
     <main class="container">
@@ -19,7 +30,7 @@
 
     <footer>
       <div class="container">
-        <p>&copy; 2024 Nombre del Restaurante. Todos los derechos reservados.</p>
+        <p>&copy; 2024 MASAHE. Todos los derechos reservados.</p>
       </div>
     </footer>
 
