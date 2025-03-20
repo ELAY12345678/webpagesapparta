@@ -19,8 +19,8 @@
         </div>
         <div class="nav-links">
           <a href="#nosotros">NOSOTROS</a>
-          <a href="#reservas">RESERVAS</a>
-          <a href="#menu">MENÚ</a>
+          <a href="https://www.apparta.co/omasake/reservas" target="_blank">RESERVAS</a>
+          <a href="{{ url_for('static', filename='files/menu.pdf') }}" download>MENÚ</a>
           <a href="#ubicacion">UBICACIÓN</a>
           <a href="#contacto">CONTACTO</a>
         </div>
@@ -28,7 +28,7 @@
           <span></span>
           <span></span>
           <span></span>
-      </div>
+        </div>
       </nav>
     </header>
 
@@ -70,91 +70,6 @@
             <div class="nosotros-image right-image">
               <img src="{{ url_for('static', filename='images/nosotros-img-right.jpg') }}" alt="Plato tradicional japonés">
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="menu" class="menu">
-      <div class="container">
-        <h2>NUESTRO MENÚ</h2>
-        <div class="menu-categories">
-          <div class="menu-category">
-            <img src="{{ url_for('static', filename='images/sushi-category.jpg') }}" alt="Selección de sushi">
-            <h3>SUSHI</h3>
-            <p>Descubre nuestra variedad de rollos frescos preparados al momento</p>
-            <a href="#" class="btn-text">Ver opciones</a>
-          </div>
-          <div class="menu-category">
-            <img src="{{ url_for('static', filename='images/ramen-category.jpg') }}" alt="Bowl de ramen">
-            <h3>RAMEN</h3>
-            <p>Saborea nuestros caldos caseros con fideos artesanales</p>
-            <a href="#" class="btn-text">Ver opciones</a>
-          </div>
-          <div class="menu-category">
-            <img src="{{ url_for('static', filename='images/postres-category.jpg') }}" alt="Postres japoneses">
-            <h3>POSTRES</h3>
-            <p>Finaliza tu experiencia con nuestros dulces tradicionales</p>
-            <a href="#" class="btn-text">Ver opciones</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="reservas" class="reservations">
-      <div class="container">
-        <div class="reservations-content">
-          <div class="reservations-image">
-            <img src="{{ url_for('static', filename='images/restaurant-interior.jpg') }}" alt="Interior del restaurante">
-          </div>
-          <div class="reservations-form">
-            <h2>RESERVA TU MESA</h2>
-            <form action="#" method="POST" id="reservation-form">
-              <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Nombre completo" required>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email" required>
-              </div>
-              <div class="form-group">
-                <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <input type="date" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                  <select id="time" name="time" required>
-                    <option value="" disabled selected>Hora</option>
-                    <option value="13:00">13:00</option>
-                    <option value="13:30">13:30</option>
-                    <option value="14:00">14:00</option>
-                    <option value="14:30">14:30</option>
-                    <option value="20:00">20:00</option>
-                    <option value="20:30">20:30</option>
-                    <option value="21:00">21:00</option>
-                    <option value="21:30">21:30</option>
-                    <option value="22:00">22:00</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <select id="guests" name="guests" required>
-                  <option value="" disabled selected>Número de comensales</option>
-                  <option value="1">1 persona</option>
-                  <option value="2">2 personas</option>
-                  <option value="3">3 personas</option>
-                  <option value="4">4 personas</option>
-                  <option value="5">5 personas</option>
-                  <option value="6">6 personas</option>
-                  <option value="more">Más de 6 personas</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <textarea id="message" name="message" placeholder="Mensaje (opcional)"></textarea>
-              </div>
-              <button type="submit" class="btn-primary">CONFIRMAR RESERVA</button>
-            </form>
           </div>
         </div>
       </div>
@@ -219,8 +134,8 @@
           </div>
           <div class="footer-links">
             <a href="#nosotros">NOSOTROS</a>
-            <a href="#reservas">RESERVAS</a>
-            <a href="#menu">MENÚ</a>
+            <a href="https://www.apparta.co/omasake/reservas" target="_blank">RESERVAS</a>
+            <a href="{{ url_for('static', filename='files/menu.pdf') }}" download>MENÚ</a>
             <a href="#ubicacion">UBICACIÓN</a>
             <a href="#contacto">CONTACTO</a>
           </div>
