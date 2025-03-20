@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title>Omasake</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre del Restaurante</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
-    <h1>Welcome to the Omasake Landing Page!</h1>
+    <header>
+      <div class="container">
+        <h1>Bienvenidos a Nuestro Restaurante</h1>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Aquí irá el contenido principal -->
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Nombre del Restaurante. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>
 
