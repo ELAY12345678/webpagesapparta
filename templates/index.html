@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MASAHE - A Taste of Japan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Alata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
@@ -21,16 +24,210 @@
           <a href="#ubicacion">UBICACIÓN</a>
           <a href="#contacto">CONTACTO</a>
         </div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
       </nav>
     </header>
 
-    <main class="container">
-      <!-- Aquí irá el contenido principal -->
-    </main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2 class="chef-title"><span class="chef-title-light">CHEF</span> <span class="chef-title-dark">IAN PIETRO</span></h2>
+        <p>Cuenta la historia que el sushi "Edomae" fue creado en la era Bunsei
+          a principios del siglo XIX en "Edo", hoy conocida como la ciudad
+          
+          de Tokio. La palabra "Edomae", traduce textualmente "enfrente de
+          Edo", en referencia a la ubicación de la bahía de Tokio, donde hace
+          más de 200 años los maestros del sushi conseguían una amplia
+          variedad de los mejores pescados y mariscos. Utilizamos el mismo
+          método y las mismas técnicas de conservación y maduración de
+          aquella época con el fin de preservar la frescura en cada paladar.
+          El "zuke" (sumergir en salsa de soja), "niru" (cocer a fuego lento) y el
+          "shime" (curar con sal y vinagre), son algunos de estos procesos
+          cargados de una simplicidad compleja.</p>
+      </div>
+    </section>
+
+    <section id="nosotros" class="about">
+      <div class="container">
+        <h2 class="nosotros-heading"><span class="chef-title-black">NOSOTROS:</span> <span class="chef-title-dark">OMASAKE</span></h2>
+        <div class="nosotros-content">
+          <div class="nosotros-text">
+            <p>
+              OMAKASE ES UNA EXPRESIÓN JAPONESA QUE SIGNIFICA "LO DEJO EN TÍ" O "LO DEJO EN TUS MANOS". DEJAR TODO EN MANOS DE LA PERSONA QUE TE ESTÁ PRESTANDO EL SERVICIO, EL "ITAMAE". NO EXISTE MENÚ, Y SE SIRVE LO QUE EL CHEF PREPARE, GENERÁNDOSE UNA RELACIÓN DE CONFIANZA Y RESPETO, ENTRE EL CHEF Y EL COMENSAL, YA QUE ESTE ÚLTIMO SE DEJA LLEVAR Y ACEPTA LO QUE LLEGUE A LA MESA O A SUS MANOS.
+            </p>
+          </div>
+          <div class="nosotros-images-container">
+            <div class="nosotros-image left-image">
+              <img src="{{ url_for('static', filename='images/nosotros-img-left.jpg') }}" alt="Experiencia gastronómica japonesa">
+            </div>
+            <div class="nosotros-image center-image">
+              <img src="{{ url_for('static', filename='images/nosotros-img-center.jpg') }}" alt="Chef preparando sushi">
+            </div>
+            <div class="nosotros-image right-image">
+              <img src="{{ url_for('static', filename='images/nosotros-img-right.jpg') }}" alt="Plato tradicional japonés">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2>NUESTRO MENÚ</h2>
+        <div class="menu-categories">
+          <div class="menu-category">
+            <img src="{{ url_for('static', filename='images/sushi-category.jpg') }}" alt="Selección de sushi">
+            <h3>SUSHI</h3>
+            <p>Descubre nuestra variedad de rollos frescos preparados al momento</p>
+            <a href="#" class="btn-text">Ver opciones</a>
+          </div>
+          <div class="menu-category">
+            <img src="{{ url_for('static', filename='images/ramen-category.jpg') }}" alt="Bowl de ramen">
+            <h3>RAMEN</h3>
+            <p>Saborea nuestros caldos caseros con fideos artesanales</p>
+            <a href="#" class="btn-text">Ver opciones</a>
+          </div>
+          <div class="menu-category">
+            <img src="{{ url_for('static', filename='images/postres-category.jpg') }}" alt="Postres japoneses">
+            <h3>POSTRES</h3>
+            <p>Finaliza tu experiencia con nuestros dulces tradicionales</p>
+            <a href="#" class="btn-text">Ver opciones</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservas" class="reservations">
+      <div class="container">
+        <div class="reservations-content">
+          <div class="reservations-image">
+            <img src="{{ url_for('static', filename='images/restaurant-interior.jpg') }}" alt="Interior del restaurante">
+          </div>
+          <div class="reservations-form">
+            <h2>RESERVA TU MESA</h2>
+            <form action="#" method="POST" id="reservation-form">
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                  <select id="time" name="time" required>
+                    <option value="" disabled selected>Hora</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <select id="guests" name="guests" required>
+                  <option value="" disabled selected>Número de comensales</option>
+                  <option value="1">1 persona</option>
+                  <option value="2">2 personas</option>
+                  <option value="3">3 personas</option>
+                  <option value="4">4 personas</option>
+                  <option value="5">5 personas</option>
+                  <option value="6">6 personas</option>
+                  <option value="more">Más de 6 personas</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" placeholder="Mensaje (opcional)"></textarea>
+              </div>
+              <button type="submit" class="btn-primary">CONFIRMAR RESERVA</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicacion" class="location">
+      <div class="container">
+        <h2>UBICACIÓN</h2>
+        <div class="location-content">
+          <div class="location-info">
+            <div class="address">
+              <h3>DIRECCIÓN</h3>
+              <p>Calle Gran Vía, 25</p>
+              <p>28013 Madrid</p>
+            </div>
+            <div class="hours">
+              <h3>HORARIO</h3>
+              <p><strong>Lunes a Jueves:</strong> 13:00 - 15:30 | 20:00 - 23:00</p>
+              <p><strong>Viernes y Sábado:</strong> 13:00 - 16:00 | 20:00 - 00:00</p>
+              <p><strong>Domingo:</strong> 13:00 - 16:00</p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn-secondary">CÓMO LLEGAR</a>
+          </div>
+          <div class="location-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.6234833872377!2d-3.7050416846415795!3d40.42014887936409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422886d6370605%3A0x5bdd92595bd7b886!2sGran%20V%C3%ADa%2C%20Madrid!5e0!3m2!1ses!2ses!4v1648554786228!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="container">
+        <h2>CONTACTO</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <h3>TELÉFONO</h3>
+              <p>+34 912 345 678</p>
+            </div>
+            <div class="contact-item">
+              <h3>EMAIL</h3>
+              <p>info@masahe.com</p>
+            </div>
+            <div class="contact-item">
+              <h3>REDES SOCIALES</h3>
+              <div class="social-links">
+                <a href="#" target="_blank" class="social-link">Instagram</a>
+                <a href="#" target="_blank" class="social-link">Facebook</a>
+                <a href="#" target="_blank" class="social-link">Twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <div class="container">
-        <p>&copy; 2024 MASAHE. Todos los derechos reservados.</p>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="{{ url_for('static', filename='images/masahe-logo.png') }}" alt="MASAHE Logo">
+          </div>
+          <div class="footer-links">
+            <a href="#nosotros">NOSOTROS</a>
+            <a href="#reservas">RESERVAS</a>
+            <a href="#menu">MENÚ</a>
+            <a href="#ubicacion">UBICACIÓN</a>
+            <a href="#contacto">CONTACTO</a>
+          </div>
+          <div class="footer-info">
+            <p>&copy; 2024 MASAHE. Todos los derechos reservados.</p>
+          </div>
+        </div>
       </div>
     </footer>
 
