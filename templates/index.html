@@ -21,6 +21,7 @@
           <a href="#nosotros">NOSOTROS</a>
           <a href="https://www.apparta.co/omasake/reservas" target="_blank">RESERVAS</a>
           <a href="{{ url_for('static', filename='files/menu.pdf') }}" download>MENÚ</a>
+          <a href="#eventos">EVENTOS</a>
           <a href="#ubicacion">UBICACIÓN</a>
           <a href="#contacto">CONTACTO</a>
         </div>
@@ -71,6 +72,28 @@
               <img src="{{ url_for('static', filename='images/nosotros-img-right.jpg') }}" alt="Plato tradicional japonés">
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="eventos" class="eventos">
+      <div class="evento-container">
+        <div class="evento-image">
+          <img src="{{ url_for('static', filename='images/reservas-background.jpg') }}" alt="Sushi de atún">
+        </div>
+        <div class="evento-content">
+          <h2 class="evento-title">EVENTO OMASAKE</h2>
+          <div class="evento-separator"></div>
+          <div class="evento-description">
+            <p>MENÚ DEGUSTACIÓN OMAKASE, DÉJALO EN LAS MANOS DEL CHEF. A 11 PASOS.</p>
+          </div>
+          <div class="evento-separator"></div>
+          <div class="evento-details">
+            <p>MAR, MIÉ, JUE, VIE, SÁB, DOM</p>
+            <p>2 H 30 MIN</p>
+            <p>$ 244.000</p>
+          </div>
+          <a href="https://www.apparta.co/omasake/reservas" target="_blank" class="evento-reservar">RESERVAR</a>
         </div>
       </div>
     </section>
@@ -136,6 +159,7 @@
             <a href="#nosotros">NOSOTROS</a>
             <a href="https://www.apparta.co/omasake/reservas" target="_blank">RESERVAS</a>
             <a href="{{ url_for('static', filename='files/menu.pdf') }}" download>MENÚ</a>
+            <a href="#eventos">EVENTOS</a>
             <a href="#ubicacion">UBICACIÓN</a>
             <a href="#contacto">CONTACTO</a>
           </div>

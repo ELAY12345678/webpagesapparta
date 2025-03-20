@@ -12,7 +12,8 @@
     --text-color: #333333;         /* Gris oscuro para texto */
     --light-color: #FFFFFF;        /* Blanco */
     --bg-light: #F8F7F6;           /* Fondo beige claro para nosotros */
-    --chef-accent: #9C572A;        /* Color turquesa para parte del título del chef */
+    --chef-accent: #9C572A;        /* Color acento marrón */
+    --evento-bg: #53392B;          /* Fondo marrón oscuro para eventos */
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;
     --font-alata: 'Alata', sans-serif;
@@ -477,6 +478,147 @@ section {
     
     .center-image {
         height: 220px;
+    }
+}
+
+/* Eventos Section */
+.eventos {
+    padding: 0;
+    background-color: var(--bg-light);
+}
+
+.evento-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--evento-bg);
+}
+
+.evento-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.evento-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.evento-content {
+    flex: 1;
+    padding: 3rem;
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 50%;
+}
+
+.evento-title {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.evento-title::after {
+    display: none;
+}
+
+.evento-separator {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 1.5rem 0;
+}
+
+.evento-description p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    color: var(--light-color);
+}
+
+.evento-details {
+    margin-bottom: 2rem;
+}
+
+.evento-details p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    color: var(--light-color);
+}
+
+.evento-reservar {
+    display: inline-block;
+    background-color: var(--bg-light);
+    color: var(--secondary-color);
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 0.8rem 3rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.evento-reservar:hover {
+    background-color: rgba(248, 247, 246, 0.9);
+    transform: translateY(-2px);
+}
+
+/* Media queries for Eventos section */
+@media screen and (max-width: 992px) {
+    .evento-container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .evento-image, .evento-content {
+        max-width: 100%;
+    }
+
+    .evento-content {
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .evento-title {
+        font-size: 1.8rem;
+    }
+
+    .evento-content {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .evento-title {
+        font-size: 1.5rem;
+    }
+
+    .evento-content {
+        padding: 1.5rem;
+    }
+
+    .evento-description p,
+    .evento-details p {
+        font-size: 0.85rem;
+    }
+
+    .evento-reservar {
+        width: 100%;
+        padding: 0.7rem 1.5rem;
     }
 }
 
