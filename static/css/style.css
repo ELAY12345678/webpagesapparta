@@ -759,7 +759,7 @@ section {
     background-size: cover;
     background-position: center;
     color: var(--light-color);
-    padding: 4rem 0;
+    padding: 2rem 0;
     text-align: center;
     margin-top: 0;
     overflow: hidden;
@@ -1092,4 +1092,28 @@ section {
     .hero-content h1 {
         font-size: 2.5rem;
     }
+}
+
+.copyright-text {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.heart {
+    color: #9C572A;
+    font-size: 1.2rem;
+    animation: heartbeat 1.5s infinite ease-in-out;
+    display: inline-block;
+    transform-origin: center;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.1); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.1); }
+    70% { transform: scale(1); }
 } 
